@@ -112,7 +112,7 @@ function getLinearEquationRoot(a, b) {
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
     const numerator = x1*x2 + y1*y2;
-    const denominator = Math.sqrt(x1**2 + y1**2) * Math.sqrt(x2**2 + y2**2);
+    const denominator = Math.hypot(x1, y1) * Math.hypot(x2, y2);
     
     // Вычисляем угол между векторами
     const angle = Math.acos(numerator / denominator);
